@@ -1,11 +1,11 @@
-//ÅÅĞòÒÔºó£¬ÁôÏÂÀ´µÄ±¦Ê¯ÊÇÁ¬ĞøµÄÒ»¶Î
-//²»ÄÜÖ±½ÓÇóºÍ
-//Èç¹û±©Á¦½â¾öĞèÒªÔÚwhile(t--)Ñ­»·ÀïÃæ£¬Ç¶Ì×Ò»¸ösort()ºÍwhile(k--)
-//ÔÚwhile(k--)Àï½øĞĞerase()-->Ê±¼ä¸´ÔÓ¶ÈÎª O(n)
-//k µÄ·¶Î§Îª 1 <= k <= 99999,ÕâÑùĞ´»á³¬Ê±
+//æ’åºä»¥åï¼Œç•™ä¸‹æ¥çš„å®çŸ³æ˜¯è¿ç»­çš„ä¸€æ®µ
+//ä¸èƒ½ç›´æ¥æ±‚å’Œ
+//å¦‚æœæš´åŠ›è§£å†³éœ€è¦åœ¨while(t--)å¾ªç¯é‡Œé¢ï¼ŒåµŒå¥—ä¸€ä¸ªsort()å’Œwhile(k--)
+//åœ¨while(k--)é‡Œè¿›è¡Œerase()-->æ—¶é—´å¤æ‚åº¦ä¸º O(n)
+//k çš„èŒƒå›´ä¸º 1 <= k <= 99999,è¿™æ ·å†™ä¼šè¶…æ—¶
 
-//Ç°×ººÍ¿ÉÒÔ½â¾öÕâ¸öÎÊÌâ
-//ÆäÊ±¼ä¸´ÔÓ¶ÈÎª O(n log n)
+//å‰ç¼€å’Œå¯ä»¥è§£å†³è¿™ä¸ªé—®é¢˜
+//å…¶æ—¶é—´å¤æ‚åº¦ä¸º O(n log n)
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,21 +13,20 @@ using ll = long long;
 
 void solve(const int &Case)
 {
-    int n, k;
-    cin >> n >> k;
+    int n, k; cin >> n >> k;
     vector<int> a(n);
     for (auto &x : a)
         cin >> x;
     sort(a.begin(), a.end());
 
-    //ÕâÀï×¢ÒâÇ°×ººÍ´Ó 1 ¿ªÊ¼£¬¹²ÓĞ n ¸öÊı¾İ
+    //è¿™é‡Œæ³¨æ„å‰ç¼€å’Œä» 1 å¼€å§‹ï¼Œå…±æœ‰ n ä¸ªæ•°æ®
     vector<ll> pre(n + 1);
     for (int i = 1; i <= n; ++i)
     {
         pre[i] = pre[i - 1] + a[i - 1];
     }
 
-    //Ã¶¾Ù
+    //æšä¸¾
     ll ans = 0;
     for (int i = 0; i <= k; ++i)
     {
@@ -39,8 +38,7 @@ void solve(const int &Case)
 int main(void)
 {
     ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-    int t;
-    cin >> t;
+    int t; cin >> t;
     while (t--)
         solve(t);
     return 0;
