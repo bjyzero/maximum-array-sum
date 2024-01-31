@@ -54,3 +54,31 @@
 对于 100% 的评测数据， 1 <= t <= 10, 3 <= n <= 2 * 10^5, 1 <= k <= 99999, 2k < n 。  
 
 ### 运行限制
+
+<table>
+  <tr>
+    <th>语言</th>
+    <th>最大运行时间</th>
+    <th>最大运行内存</th>
+  </tr>
+  <tr>
+    <th>C++</th>
+    <th>2s</th>
+    <th>256M</th>
+  </tr>
+  <tr>
+    <th>C</th>
+    <th>2s</th>
+    <th>256M</th>
+  </tr>
+  <tr>
+    <th>Java</th>
+    <th>3s</th>
+    <th>256M</th>
+  </tr>
+  <tr>
+    <th>Python3</th>
+    <th>4s</th>
+    <th>256M</th>
+  </tr>
+</table>
